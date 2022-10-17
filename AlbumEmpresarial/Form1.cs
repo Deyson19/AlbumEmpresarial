@@ -22,6 +22,9 @@ namespace AlbumEmpresarial
     {
         private readonly ApplicationDbContext dbContext = new ApplicationDbContext();
         private List<Fotos> _fotos;
+        Image img = Image.FromFile(@"..\Imagen\error.jpg");
+
+        int buscarId = 0;
         public Form1()
         {
             InitializeComponent();
@@ -69,7 +72,7 @@ namespace AlbumEmpresarial
                         {
                             MessageBox.Show("No se encontrado un registro en la consulta.");
                             limpiarCampos();
-                            InitializeComponent();
+                            
                         }
                         else
                         {
@@ -80,10 +83,22 @@ namespace AlbumEmpresarial
                             datePickerFecha.Visible = false;
                             lblFechaEvento.Visible = true;
                             lblFechaEvento.Text = data.Fecha_Evento.ToString();
-                            //MemoryStream ms = new MemoryStream((byte[])data.Imagen);
-                            //Bitmap bm = new Bitmap(ms);
-                            //pbImagen.Image = bm;
+                        try
+                        {
+                            MemoryStream ms = new MemoryStream((byte[])data.Imagen);
+                            Bitmap bm = new Bitmap(ms);
+                            pbImagen.Image = bm;
                         }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Ha ocurrido un problema al recuperar la imagen.\nRevisa que el formato sea correcto.");
+                            pbImagen.Image = img;
+
+                        }
+
+                        btnImgSiguiente.Visible = true;
+                        buscarId = int.Parse(data.Id.ToString());
+                    }
 
                     }
                     catch (MySqlException ex)
@@ -208,7 +223,7 @@ namespace AlbumEmpresarial
                         limpiarCampos();
                         if ((txtId.Text !=null)||txtId.Text!= String.Empty)
                         {
-                            MessageBox.Show("Tiene un balor de:" + txtId.Text.ToString());
+                            MessageBox.Show("Tiene un valor de:" + txtId.Text.ToString());
                             txtId.Text = string.Empty;
                             MessageBox.Show("Test"+txtId.Text.ToString());
                         }
@@ -250,6 +265,115 @@ namespace AlbumEmpresarial
             
 
             return true;
+        }
+        
+        private void btnImgSiguiente_Click(object sender, EventArgs e)
+        {
+            buscarId ++;
+            limpiarCampos();
+            try
+            {
+                var data = dbContext.Fotos.Select(f => new
+                {
+                    Id = f.Id,
+                    Descripcion = f.Descripcion,
+                    Fecha_Evento = f.Fecha_Evento,
+                    Lugar = f.Lugar,
+                    Descripcion_Evento = f.Descripcion_Evento,
+                    Imagen = f.Imagen
+                }).FirstOrDefault(i => i.Id == Convert.ToInt32(buscarId));
+
+                if ((data == null) || (data.Id == null))
+                {
+                    MessageBox.Show("No se encontrado un registro en la consulta.\nIntenta con otro ID.");
+                    limpiarCampos();
+                    InitializeComponent();
+                }
+                else
+                {
+                    txtId.Text = data.Id.ToString();
+                    txtDescripcionEvento.Text = data.Descripcion_Evento.ToString();
+                    txtDescripcionImagen.Text = data.Descripcion.ToString();
+                    txtLugar.Text = data.Lugar.ToString();
+                    datePickerFecha.Visible = false;
+                    lblFechaEvento.Visible = true;
+                    lblFechaEvento.Text = data.Fecha_Evento.ToString();
+                    try
+                    {
+                        MemoryStream ms = new MemoryStream((byte[])data.Imagen);
+                        Bitmap bm = new Bitmap(ms);
+                        pbImagen.Image = bm;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Ha ocurrido un problema al recuperar la imagen.");
+                        pbImagen.Image = img;
+                    }
+
+                    btnImgSiguiente.Visible = true;
+                    if (buscarId >=1)
+                    {
+                        btnImgAnterior.Visible = true;
+                    }
+                    buscarId = int.Parse(data.Id.ToString());
+                }
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Ha ocurrido el error: " + ex);
+            }
+
+        }
+
+        private void btnImgAnterior_Click(object sender, EventArgs e)
+        {
+            buscarId--;
+            limpiarCampos();
+            try
+            {
+                var data = dbContext.Fotos.Select(f => new
+                {
+                    Id = f.Id,
+                    Descripcion = f.Descripcion,
+                    Fecha_Evento = f.Fecha_Evento,
+                    Lugar = f.Lugar,
+                    Descripcion_Evento = f.Descripcion_Evento,
+                    Imagen = f.Imagen
+                }).FirstOrDefault(i => i.Id == Convert.ToInt32(buscarId));
+
+                if ((data == null) || (data.Id == null))
+                {
+                    MessageBox.Show("No se encontrado un registro en la consulta.\nIntenta con otro ID.");
+                    limpiarCampos();
+                    InitializeComponent();
+                }
+                else
+                {
+                    txtId.Text = data.Id.ToString();
+                    txtDescripcionEvento.Text = data.Descripcion_Evento.ToString();
+                    txtDescripcionImagen.Text = data.Descripcion.ToString();
+                    txtLugar.Text = data.Lugar.ToString();
+                    datePickerFecha.Visible = false;
+                    lblFechaEvento.Visible = true;
+                    lblFechaEvento.Text = data.Fecha_Evento.ToString();
+                    MemoryStream ms = new MemoryStream((byte[])data.Imagen);
+                    Bitmap bm = new Bitmap(ms);
+                    pbImagen.Image = bm;
+
+                    btnImgSiguiente.Visible = true;
+                    if (buscarId >=1)
+                    {
+                        btnImgAnterior.Visible = true;
+                    }
+                    buscarId = int.Parse(data.Id.ToString());
+                }
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Ha ocurrido el error: " + ex);
+            }
         }
     }
 }
