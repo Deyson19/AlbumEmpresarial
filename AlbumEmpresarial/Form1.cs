@@ -1,19 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
-using MySql.Data.MySqlClient;
-using MySqlConnector;
+﻿using AlbumEmpresarial.Context;
+using AlbumEmpresarial.Entities;
+using AlbumEmpresarial.ManipulaDatos;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.Entity;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Markup;
 using MySqlException = MySql.Data.MySqlClient.MySqlException;
 
 namespace AlbumEmpresarial
@@ -21,7 +15,6 @@ namespace AlbumEmpresarial
     public partial class Form1 : Form
     {
         private readonly ApplicationDbContext dbContext = new ApplicationDbContext();
-        private List<Fotos> _fotos;
         Image img = Image.FromFile(@"..\Imagen\error.jpg");
 
         int buscarId = 0;

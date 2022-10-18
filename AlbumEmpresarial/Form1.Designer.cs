@@ -77,6 +77,7 @@
             this.txtId.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtId.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtId.Location = new System.Drawing.Point(154, 16);
+            this.txtId.Multiline = true;
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(143, 25);
             this.txtId.TabIndex = 2;
