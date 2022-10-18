@@ -26,6 +26,7 @@ namespace AlbumEmpresarial
         {
             this.dbContext = dbContext;
         }
+        #region Limpiar los campos del formulario
         void limpiarCampos()
         {
             txtDescripcionEvento.Text = String.Empty;
@@ -37,6 +38,9 @@ namespace AlbumEmpresarial
             pbImagen.Image = null;
              
         }
+        #endregion
+
+        #region Evento de buscar una imagen en la base de datos.
         private void btnCargar_Click(object sender, EventArgs e)
         {
             var id = txtId.Text.ToString();
@@ -65,7 +69,6 @@ namespace AlbumEmpresarial
                         {
                             MessageBox.Show("No se encontrado un registro en la consulta.");
                             limpiarCampos();
-                            
                         }
                         else
                         {
@@ -92,17 +95,16 @@ namespace AlbumEmpresarial
                         btnImgSiguiente.Visible = true;
                         buscarId = int.Parse(data.Id.ToString());
                     }
-
                     }
                     catch (MySqlException ex)
                     {
                         MessageBox.Show("Ha ocurrido el error: " + ex);
                     }
                 }
-                      
-
         }
-      
+        #endregion
+
+        #region Evento para seleccionar una imagen del computador.
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
@@ -115,7 +117,9 @@ namespace AlbumEmpresarial
                 pbImagen.Image = Image.FromFile(openFileDialog1.FileName);
             }
         }
+        #endregion
 
+        #region Evento para guardar los datos en la base de datos.
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (Validar()==true)
@@ -134,7 +138,7 @@ namespace AlbumEmpresarial
                     f.Imagen = convertirImagen;
                     f.Lugar = txtLugar.Text;
                     f.Fecha_Evento = date.ToString("yyyy-MM-dd");
-
+                    //Envio de los datos a la otra clase
                     DataAccess datos = new DataAccess();
                     datos.IngresarDatos(f);
 
@@ -151,15 +155,18 @@ namespace AlbumEmpresarial
                 MessageBox.Show("Hubo un error con los campos, todos deben estar completos.","Atención!");
                 limpiarCampos();
             }
-
         }
+        #endregion
 
+        #region Estado del manipulador de fecha
         private void datePickerFecha_ValueChanged(object sender, EventArgs e)
         {
             DateTime date = datePickerFecha.Value;
             
         }
+        #endregion
 
+        #region Evento para eliminar los registros de la tabla
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             var id = txtId.Text.ToString();
@@ -175,7 +182,9 @@ namespace AlbumEmpresarial
                 limpiarCampos();
             }
         }
-
+        #endregion
+        
+        #region Evento que me permite actualizar los registros de una tabla
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             var id = txtId.Text.ToString();
@@ -184,17 +193,14 @@ namespace AlbumEmpresarial
             {
                 MessageBox.Show("Debes completar el campo Id");
                 txtId.Focus();
-                
             }
             else
             {
-
                 if (Validar()==true)
                 {
                     MemoryStream ms = new MemoryStream();
                     pbImagen.Image.Save(ms, ImageFormat.Jpeg);
                     byte[] convertirImagen = ms.ToArray();
-
 
                     DateTime date = datePickerFecha.Value;
 
@@ -224,6 +230,9 @@ namespace AlbumEmpresarial
                 }
             }
         }
+        #endregion
+        
+        #region Validador de los campos para que no esten vacios
         bool Validar()
         {
             if (txtDescripcionImagen.Text == string.Empty)
@@ -255,11 +264,11 @@ namespace AlbumEmpresarial
                 MessageBox.Show("Debe indicar una imagen.");
                 return false;
             }
-            
-
             return true;
         }
-        
+        #endregion
+
+        #region Boton para pasar a la siguiente imagen
         private void btnImgSiguiente_Click(object sender, EventArgs e)
         {
             buscarId ++;
@@ -316,9 +325,10 @@ namespace AlbumEmpresarial
             {
                 MessageBox.Show("Ha ocurrido el error: " + ex);
             }
-
         }
+        #endregion
 
+        #region Boton para retroceder una imagen
         private void btnImgAnterior_Click(object sender, EventArgs e)
         {
             buscarId--;
@@ -368,5 +378,8 @@ namespace AlbumEmpresarial
                 MessageBox.Show("Ha ocurrido el error: " + ex);
             }
         }
+        #endregion
+
+
     }
 }
