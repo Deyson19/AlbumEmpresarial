@@ -308,7 +308,7 @@ namespace AlbumEmpresarial
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Ha ocurrido un problema al recuperar la imagen.");
+                        MessageBox.Show("Ha ocurrido un problema al recuperar la imagen.\nRevisa que el formato sea correcto.");
                         pbImagen.Image = img;
                     }
 
@@ -360,9 +360,17 @@ namespace AlbumEmpresarial
                     datePickerFecha.Visible = false;
                     lblFechaEvento.Visible = true;
                     lblFechaEvento.Text = data.Fecha_Evento.ToString();
-                    MemoryStream ms = new MemoryStream((byte[])data.Imagen);
-                    Bitmap bm = new Bitmap(ms);
-                    pbImagen.Image = bm;
+                    try
+                    {
+                        MemoryStream ms = new MemoryStream((byte[])data.Imagen);
+                        Bitmap bm = new Bitmap(ms);
+                        pbImagen.Image = bm;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Ha ocurrido un problema al recuperar la imagen.\nRevisa que el formato sea correcto.");
+                        pbImagen.Image = img;
+                    }
 
                     btnImgSiguiente.Visible = true;
                     if (buscarId >=1)
