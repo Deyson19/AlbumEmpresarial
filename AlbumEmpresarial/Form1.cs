@@ -222,9 +222,8 @@ namespace AlbumEmpresarial
                         limpiarCampos();
                         if ((txtId.Text !=null)||txtId.Text!= String.Empty)
                         {
-                            MessageBox.Show("Tiene un valor de:" + txtId.Text.ToString());
+                            MessageBox.Show("Se actualiza la entrada con valor de:" + txtId.Text.ToString());
                             txtId.Text = string.Empty;
-                            MessageBox.Show("Test"+txtId.Text.ToString());
                         }
                     }
                 }
