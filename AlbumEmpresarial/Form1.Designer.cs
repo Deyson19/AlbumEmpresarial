@@ -49,58 +49,44 @@
             this.btnActualizar = new FontAwesome.Sharp.IconButton();
             this.btnImgSiguiente = new FontAwesome.Sharp.IconButton();
             this.btnImgAnterior = new FontAwesome.Sharp.IconButton();
+            this.btnLimpiarCampos = new FontAwesome.Sharp.IconButton();
+            this.panelOcultarId = new System.Windows.Forms.Panel();
+            this.btnMostrarBuscarId = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
+            this.panelOcultarId.SuspendLayout();
             this.SuspendLayout();
             // 
             // idImagen
             // 
-            this.idImagen.AutoSize = true;
-            this.idImagen.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.idImagen.Location = new System.Drawing.Point(37, 23);
+            resources.ApplyResources(this.idImagen, "idImagen");
             this.idImagen.Name = "idImagen";
-            this.idImagen.Size = new System.Drawing.Size(63, 17);
-            this.idImagen.TabIndex = 0;
-            this.idImagen.Text = "Id Imagen:";
             // 
             // descripcion
             // 
-            this.descripcion.AutoSize = true;
-            this.descripcion.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.descripcion.Location = new System.Drawing.Point(624, 23);
+            resources.ApplyResources(this.descripcion, "descripcion");
             this.descripcion.Name = "descripcion";
-            this.descripcion.Size = new System.Drawing.Size(144, 17);
-            this.descripcion.TabIndex = 1;
-            this.descripcion.Text = "Descripcion de la Imagen:";
             // 
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtId.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtId.Location = new System.Drawing.Point(154, 16);
-            this.txtId.Multiline = true;
+            resources.ApplyResources(this.txtId, "txtId");
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(143, 25);
-            this.txtId.TabIndex = 2;
+            this.txtId.Validating += new System.ComponentModel.CancelEventHandler(this.txtId_Validating);
             // 
             // txtDescripcionImagen
             // 
             this.txtDescripcionImagen.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtDescripcionImagen.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDescripcionImagen.Location = new System.Drawing.Point(770, 14);
-            this.txtDescripcionImagen.Multiline = true;
+            resources.ApplyResources(this.txtDescripcionImagen, "txtDescripcionImagen");
             this.txtDescripcionImagen.Name = "txtDescripcionImagen";
-            this.txtDescripcionImagen.Size = new System.Drawing.Size(248, 58);
-            this.txtDescripcionImagen.TabIndex = 3;
             // 
             // pbImagen
             // 
             this.pbImagen.BackColor = System.Drawing.Color.White;
             this.pbImagen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbImagen.Location = new System.Drawing.Point(155, 181);
+            resources.ApplyResources(this.pbImagen, "pbImagen");
             this.pbImagen.Name = "pbImagen";
-            this.pbImagen.Size = new System.Drawing.Size(745, 449);
-            this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbImagen.TabIndex = 4;
             this.pbImagen.TabStop = false;
             // 
             // openFileDialog1
@@ -109,208 +95,181 @@
             // 
             // fechaEvento
             // 
-            this.fechaEvento.AutoSize = true;
-            this.fechaEvento.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.fechaEvento.Location = new System.Drawing.Point(37, 74);
+            resources.ApplyResources(this.fechaEvento, "fechaEvento");
             this.fechaEvento.Name = "fechaEvento";
-            this.fechaEvento.Size = new System.Drawing.Size(84, 17);
-            this.fechaEvento.TabIndex = 8;
-            this.fechaEvento.Text = "Fecha Evento:";
             // 
             // lugarEvento
             // 
-            this.lugarEvento.AutoSize = true;
-            this.lugarEvento.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lugarEvento.Location = new System.Drawing.Point(685, 88);
+            resources.ApplyResources(this.lugarEvento, "lugarEvento");
             this.lugarEvento.Name = "lugarEvento";
-            this.lugarEvento.Size = new System.Drawing.Size(83, 17);
-            this.lugarEvento.TabIndex = 9;
-            this.lugarEvento.Text = "Lugar Evento:";
             // 
             // descripcionEvento
             // 
-            this.descripcionEvento.AutoSize = true;
-            this.descripcionEvento.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.descripcionEvento.Location = new System.Drawing.Point(37, 121);
+            resources.ApplyResources(this.descripcionEvento, "descripcionEvento");
             this.descripcionEvento.Name = "descripcionEvento";
-            this.descripcionEvento.Size = new System.Drawing.Size(115, 17);
-            this.descripcionEvento.TabIndex = 10;
-            this.descripcionEvento.Text = "Descripción Evento:";
             // 
             // txtLugar
             // 
             this.txtLugar.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtLugar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtLugar.Location = new System.Drawing.Point(770, 79);
+            resources.ApplyResources(this.txtLugar, "txtLugar");
             this.txtLugar.Name = "txtLugar";
-            this.txtLugar.Size = new System.Drawing.Size(248, 25);
-            this.txtLugar.TabIndex = 12;
             // 
             // txtDescripcionEvento
             // 
             this.txtDescripcionEvento.BackColor = System.Drawing.Color.LemonChiffon;
             this.txtDescripcionEvento.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDescripcionEvento.Location = new System.Drawing.Point(154, 108);
-            this.txtDescripcionEvento.Multiline = true;
+            resources.ApplyResources(this.txtDescripcionEvento, "txtDescripcionEvento");
             this.txtDescripcionEvento.Name = "txtDescripcionEvento";
-            this.txtDescripcionEvento.Size = new System.Drawing.Size(264, 60);
-            this.txtDescripcionEvento.TabIndex = 13;
             // 
             // datePickerFecha
             // 
             this.datePickerFecha.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.datePickerFecha.CustomFormat = "";
+            resources.ApplyResources(this.datePickerFecha, "datePickerFecha");
             this.datePickerFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datePickerFecha.Location = new System.Drawing.Point(155, 70);
+            this.datePickerFecha.MaxDate = new System.DateTime(2022, 11, 9, 0, 0, 0, 0);
+            this.datePickerFecha.MinDate = new System.DateTime(1940, 2, 6, 0, 0, 0, 0);
             this.datePickerFecha.Name = "datePickerFecha";
-            this.datePickerFecha.Size = new System.Drawing.Size(142, 25);
-            this.datePickerFecha.TabIndex = 14;
+            this.datePickerFecha.Value = new System.DateTime(2022, 10, 24, 0, 0, 0, 0);
             this.datePickerFecha.ValueChanged += new System.EventHandler(this.datePickerFecha_ValueChanged);
             // 
             // lblFechaEvento
             // 
-            this.lblFechaEvento.AutoSize = true;
-            this.lblFechaEvento.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblFechaEvento.Location = new System.Drawing.Point(155, 73);
+            resources.ApplyResources(this.lblFechaEvento, "lblFechaEvento");
             this.lblFechaEvento.Name = "lblFechaEvento";
-            this.lblFechaEvento.Size = new System.Drawing.Size(90, 19);
-            this.lblFechaEvento.TabIndex = 15;
-            this.lblFechaEvento.Text = "fechaEvento";
-            this.lblFechaEvento.Visible = false;
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            resources.ApplyResources(this.btnEliminar, "btnEliminar");
             this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
             this.btnEliminar.IconColor = System.Drawing.Color.Red;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 30;
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(906, 264);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(112, 45);
-            this.btnEliminar.TabIndex = 16;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnCargar
             // 
+            this.btnCargar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCargar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.btnCargar.FlatAppearance.BorderSize = 0;
-            this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCargar.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            resources.ApplyResources(this.btnCargar, "btnCargar");
             this.btnCargar.IconChar = FontAwesome.Sharp.IconChar.Searchengin;
             this.btnCargar.IconColor = System.Drawing.Color.Lavender;
             this.btnCargar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCargar.IconSize = 35;
-            this.btnCargar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCargar.Location = new System.Drawing.Point(805, 112);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(189, 41);
-            this.btnCargar.TabIndex = 17;
-            this.btnCargar.Text = "Buscar registros";
-            this.btnCargar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCargar.UseVisualStyleBackColor = true;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // btnSeleccionar
             // 
+            this.btnSeleccionar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeleccionar.FlatAppearance.BorderSize = 0;
-            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            resources.ApplyResources(this.btnSeleccionar, "btnSeleccionar");
             this.btnSeleccionar.IconChar = FontAwesome.Sharp.IconChar.Upload;
             this.btnSeleccionar.IconColor = System.Drawing.SystemColors.Highlight;
             this.btnSeleccionar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSeleccionar.IconSize = 30;
-            this.btnSeleccionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSeleccionar.Location = new System.Drawing.Point(286, 633);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(132, 43);
-            this.btnSeleccionar.TabIndex = 18;
-            this.btnSeleccionar.Text = "Seleccionar";
-            this.btnSeleccionar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI Variable Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            resources.ApplyResources(this.btnGuardar, "btnGuardar");
             this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
             this.btnGuardar.IconColor = System.Drawing.Color.LawnGreen;
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 30;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(512, 633);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(131, 43);
-            this.btnGuardar.TabIndex = 19;
-            this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnActualizar
             // 
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActualizar.FlatAppearance.BorderSize = 0;
-            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            resources.ApplyResources(this.btnActualizar, "btnActualizar");
             this.btnActualizar.IconChar = FontAwesome.Sharp.IconChar.PencilSquare;
             this.btnActualizar.IconColor = System.Drawing.Color.Lavender;
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 35;
-            this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizar.Location = new System.Drawing.Point(-1, 292);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(153, 41);
-            this.btnActualizar.TabIndex = 20;
-            this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnImgSiguiente
             // 
+            this.btnImgSiguiente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImgSiguiente.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnImgSiguiente.FlatAppearance.BorderSize = 0;
-            this.btnImgSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.btnImgSiguiente, "btnImgSiguiente");
             this.btnImgSiguiente.IconChar = FontAwesome.Sharp.IconChar.Forward;
             this.btnImgSiguiente.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(166)))), ((int)(((byte)(241)))));
             this.btnImgSiguiente.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnImgSiguiente.IconSize = 35;
-            this.btnImgSiguiente.Location = new System.Drawing.Point(906, 337);
             this.btnImgSiguiente.Name = "btnImgSiguiente";
-            this.btnImgSiguiente.Size = new System.Drawing.Size(61, 45);
-            this.btnImgSiguiente.TabIndex = 21;
             this.btnImgSiguiente.UseVisualStyleBackColor = true;
-            this.btnImgSiguiente.Visible = false;
             this.btnImgSiguiente.Click += new System.EventHandler(this.btnImgSiguiente_Click);
             // 
             // btnImgAnterior
             // 
+            this.btnImgAnterior.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImgAnterior.FlatAppearance.BorderSize = 0;
-            this.btnImgAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.btnImgAnterior, "btnImgAnterior");
             this.btnImgAnterior.IconChar = FontAwesome.Sharp.IconChar.Backward;
             this.btnImgAnterior.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(166)))), ((int)(((byte)(241)))));
             this.btnImgAnterior.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnImgAnterior.IconSize = 35;
-            this.btnImgAnterior.Location = new System.Drawing.Point(79, 363);
             this.btnImgAnterior.Name = "btnImgAnterior";
-            this.btnImgAnterior.Size = new System.Drawing.Size(55, 45);
-            this.btnImgAnterior.TabIndex = 22;
             this.btnImgAnterior.UseVisualStyleBackColor = true;
-            this.btnImgAnterior.Visible = false;
             this.btnImgAnterior.Click += new System.EventHandler(this.btnImgAnterior_Click);
+            // 
+            // btnLimpiarCampos
+            // 
+            this.btnLimpiarCampos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpiarCampos.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnLimpiarCampos, "btnLimpiarCampos");
+            this.btnLimpiarCampos.IconChar = FontAwesome.Sharp.IconChar.Rotate;
+            this.btnLimpiarCampos.IconColor = System.Drawing.Color.Yellow;
+            this.btnLimpiarCampos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLimpiarCampos.IconSize = 35;
+            this.btnLimpiarCampos.Name = "btnLimpiarCampos";
+            this.btnLimpiarCampos.UseVisualStyleBackColor = true;
+            this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
+            // 
+            // panelOcultarId
+            // 
+            this.panelOcultarId.Controls.Add(this.btnMostrarBuscarId);
+            resources.ApplyResources(this.panelOcultarId, "panelOcultarId");
+            this.panelOcultarId.Name = "panelOcultarId";
+            // 
+            // btnMostrarBuscarId
+            // 
+            this.btnMostrarBuscarId.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMostrarBuscarId.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnMostrarBuscarId, "btnMostrarBuscarId");
+            this.btnMostrarBuscarId.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
+            this.btnMostrarBuscarId.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnMostrarBuscarId.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMostrarBuscarId.IconSize = 35;
+            this.btnMostrarBuscarId.Name = "btnMostrarBuscarId";
+            this.btnMostrarBuscarId.UseVisualStyleBackColor = true;
+            this.btnMostrarBuscarId.Click += new System.EventHandler(this.btnMostrarBuscarId_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.ClientSize = new System.Drawing.Size(1030, 678);
+            this.Controls.Add(this.panelOcultarId);
+            this.Controls.Add(this.btnLimpiarCampos);
             this.Controls.Add(this.btnImgAnterior);
             this.Controls.Add(this.btnImgSiguiente);
             this.Controls.Add(this.btnActualizar);
@@ -330,14 +289,13 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.descripcion);
             this.Controls.Add(this.idImagen);
-            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(173)))), ((int)(((byte)(187)))));
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Álbum Empresarial de Eventos";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
+            this.panelOcultarId.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,5 +323,8 @@
         private FontAwesome.Sharp.IconButton btnActualizar;
         private FontAwesome.Sharp.IconButton btnImgSiguiente;
         private FontAwesome.Sharp.IconButton btnImgAnterior;
+        private FontAwesome.Sharp.IconButton btnLimpiarCampos;
+        private System.Windows.Forms.Panel panelOcultarId;
+        private FontAwesome.Sharp.IconButton btnMostrarBuscarId;
     }
 }

@@ -57,13 +57,681 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="idImagen.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="idImagen.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Narrow, 10pt, style=Bold</value>
+  </data>
+  <data name="idImagen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 23</value>
+  </data>
+  <data name="idImagen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 17</value>
+  </data>
+  <data name="idImagen.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="idImagen.Text" xml:space="preserve">
+    <value>Id a Buscar:</value>
+  </data>
+  <data name="&gt;&gt;idImagen.Name" xml:space="preserve">
+    <value>idImagen</value>
+  </data>
+  <data name="&gt;&gt;idImagen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;idImagen.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;idImagen.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="descripcion.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="descripcion.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Narrow, 10pt, style=Bold</value>
+  </data>
+  <data name="descripcion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>624, 23</value>
+  </data>
+  <data name="descripcion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 17</value>
+  </data>
+  <data name="descripcion.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="descripcion.Text" xml:space="preserve">
+    <value>Descripcion de la Imagen:</value>
+  </data>
+  <data name="&gt;&gt;descripcion.Name" xml:space="preserve">
+    <value>descripcion</value>
+  </data>
+  <data name="&gt;&gt;descripcion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;descripcion.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;descripcion.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="txtId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 16</value>
+  </data>
+  <data name="txtId.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtId.PlaceholderText" xml:space="preserve">
+    <value>ID para buscar</value>
+  </data>
+  <data name="txtId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 25</value>
+  </data>
+  <data name="txtId.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtId.Name" xml:space="preserve">
+    <value>txtId</value>
+  </data>
+  <data name="&gt;&gt;txtId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtId.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="txtDescripcionImagen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>770, 14</value>
+  </data>
+  <data name="txtDescripcionImagen.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtDescripcionImagen.PlaceholderText" xml:space="preserve">
+    <value>Describe la imagen seleccionada.</value>
+  </data>
+  <data name="txtDescripcionImagen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 58</value>
+  </data>
+  <data name="txtDescripcionImagen.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtDescripcionImagen.Name" xml:space="preserve">
+    <value>txtDescripcionImagen</value>
+  </data>
+  <data name="&gt;&gt;txtDescripcionImagen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtDescripcionImagen.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtDescripcionImagen.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="pbImagen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 181</value>
+  </data>
+  <data name="pbImagen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>745, 449</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pbImagen.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pbImagen.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pbImagen.Name" xml:space="preserve">
+    <value>pbImagen</value>
+  </data>
+  <data name="&gt;&gt;pbImagen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbImagen.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pbImagen.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <data name="fechaEvento.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fechaEvento.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Narrow, 10pt, style=Bold</value>
+  </data>
+  <data name="fechaEvento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 74</value>
+  </data>
+  <data name="fechaEvento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 17</value>
+  </data>
+  <data name="fechaEvento.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="fechaEvento.Text" xml:space="preserve">
+    <value>Fecha Evento:</value>
+  </data>
+  <data name="&gt;&gt;fechaEvento.Name" xml:space="preserve">
+    <value>fechaEvento</value>
+  </data>
+  <data name="&gt;&gt;fechaEvento.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fechaEvento.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;fechaEvento.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="lugarEvento.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lugarEvento.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Narrow, 10pt, style=Bold</value>
+  </data>
+  <data name="lugarEvento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>685, 88</value>
+  </data>
+  <data name="lugarEvento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 17</value>
+  </data>
+  <data name="lugarEvento.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lugarEvento.Text" xml:space="preserve">
+    <value>Lugar Evento:</value>
+  </data>
+  <data name="&gt;&gt;lugarEvento.Name" xml:space="preserve">
+    <value>lugarEvento</value>
+  </data>
+  <data name="&gt;&gt;lugarEvento.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lugarEvento.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lugarEvento.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="descripcionEvento.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="descripcionEvento.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Narrow, 10pt, style=Bold</value>
+  </data>
+  <data name="descripcionEvento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 121</value>
+  </data>
+  <data name="descripcionEvento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 17</value>
+  </data>
+  <data name="descripcionEvento.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="descripcionEvento.Text" xml:space="preserve">
+    <value>Descripción Evento:</value>
+  </data>
+  <data name="&gt;&gt;descripcionEvento.Name" xml:space="preserve">
+    <value>descripcionEvento</value>
+  </data>
+  <data name="&gt;&gt;descripcionEvento.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;descripcionEvento.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;descripcionEvento.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="txtLugar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>770, 79</value>
+  </data>
+  <data name="txtLugar.PlaceholderText" xml:space="preserve">
+    <value>Indica el lugar del evento.</value>
+  </data>
+  <data name="txtLugar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 25</value>
+  </data>
+  <data name="txtLugar.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;txtLugar.Name" xml:space="preserve">
+    <value>txtLugar</value>
+  </data>
+  <data name="&gt;&gt;txtLugar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtLugar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtLugar.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="txtDescripcionEvento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 108</value>
+  </data>
+  <data name="txtDescripcionEvento.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtDescripcionEvento.PlaceholderText" xml:space="preserve">
+    <value>Descripción del evento de la imagen.</value>
+  </data>
+  <data name="txtDescripcionEvento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 60</value>
+  </data>
+  <data name="txtDescripcionEvento.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;txtDescripcionEvento.Name" xml:space="preserve">
+    <value>txtDescripcionEvento</value>
+  </data>
+  <data name="&gt;&gt;txtDescripcionEvento.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtDescripcionEvento.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtDescripcionEvento.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="datePickerFecha.CustomFormat" xml:space="preserve">
+    <value />
+  </data>
+  <data name="datePickerFecha.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 70</value>
+  </data>
+  <data name="datePickerFecha.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 25</value>
+  </data>
+  <data name="datePickerFecha.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;datePickerFecha.Name" xml:space="preserve">
+    <value>datePickerFecha</value>
+  </data>
+  <data name="&gt;&gt;datePickerFecha.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;datePickerFecha.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;datePickerFecha.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lblFechaEvento.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblFechaEvento.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt, style=Bold</value>
+  </data>
+  <data name="lblFechaEvento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 73</value>
+  </data>
+  <data name="lblFechaEvento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 19</value>
+  </data>
+  <data name="lblFechaEvento.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="lblFechaEvento.Text" xml:space="preserve">
+    <value>fechaEvento</value>
+  </data>
+  <data name="lblFechaEvento.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lblFechaEvento.Name" xml:space="preserve">
+    <value>lblFechaEvento</value>
+  </data>
+  <data name="&gt;&gt;lblFechaEvento.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblFechaEvento.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblFechaEvento.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="btnEliminar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnEliminar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
+  </data>
+  <data name="btnEliminar.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnEliminar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>906, 264</value>
+  </data>
+  <data name="btnEliminar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 45</value>
+  </data>
+  <data name="btnEliminar.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="btnEliminar.Text" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="btnEliminar.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;btnEliminar.Name" xml:space="preserve">
+    <value>btnEliminar</value>
+  </data>
+  <data name="&gt;&gt;btnEliminar.Type" xml:space="preserve">
+    <value>FontAwesome.Sharp.IconButton, FontAwesome.Sharp, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f</value>
+  </data>
+  <data name="&gt;&gt;btnEliminar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnEliminar.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btnCargar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnCargar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Sitka Small, 12pt, style=Bold</value>
+  </data>
+  <data name="btnCargar.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnCargar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>805, 112</value>
+  </data>
+  <data name="btnCargar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 41</value>
+  </data>
+  <data name="btnCargar.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="btnCargar.Text" xml:space="preserve">
+    <value>Buscar registros</value>
+  </data>
+  <data name="btnCargar.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;btnCargar.Name" xml:space="preserve">
+    <value>btnCargar</value>
+  </data>
+  <data name="&gt;&gt;btnCargar.Type" xml:space="preserve">
+    <value>FontAwesome.Sharp.IconButton, FontAwesome.Sharp, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f</value>
+  </data>
+  <data name="&gt;&gt;btnCargar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnCargar.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btnSeleccionar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnSeleccionar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
+  </data>
+  <data name="btnSeleccionar.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnSeleccionar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>348, 633</value>
+  </data>
+  <data name="btnSeleccionar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 43</value>
+  </data>
+  <data name="btnSeleccionar.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="btnSeleccionar.Text" xml:space="preserve">
+    <value>Seleccionar</value>
+  </data>
+  <data name="btnSeleccionar.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;btnSeleccionar.Name" xml:space="preserve">
+    <value>btnSeleccionar</value>
+  </data>
+  <data name="&gt;&gt;btnSeleccionar.Type" xml:space="preserve">
+    <value>FontAwesome.Sharp.IconButton, FontAwesome.Sharp, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f</value>
+  </data>
+  <data name="&gt;&gt;btnSeleccionar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSeleccionar.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btnGuardar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnGuardar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Variable Text, 12pt, style=Bold</value>
+  </data>
+  <data name="btnGuardar.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnGuardar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>574, 633</value>
+  </data>
+  <data name="btnGuardar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 43</value>
+  </data>
+  <data name="btnGuardar.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="btnGuardar.Text" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="&gt;&gt;btnGuardar.Name" xml:space="preserve">
+    <value>btnGuardar</value>
+  </data>
+  <data name="&gt;&gt;btnGuardar.Type" xml:space="preserve">
+    <value>FontAwesome.Sharp.IconButton, FontAwesome.Sharp, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f</value>
+  </data>
+  <data name="&gt;&gt;btnGuardar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGuardar.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnActualizar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnActualizar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
+  </data>
+  <data name="btnActualizar.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnActualizar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, 292</value>
+  </data>
+  <data name="btnActualizar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 41</value>
+  </data>
+  <data name="btnActualizar.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="btnActualizar.Text" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="&gt;&gt;btnActualizar.Name" xml:space="preserve">
+    <value>btnActualizar</value>
+  </data>
+  <data name="&gt;&gt;btnActualizar.Type" xml:space="preserve">
+    <value>FontAwesome.Sharp.IconButton, FontAwesome.Sharp, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f</value>
+  </data>
+  <data name="&gt;&gt;btnActualizar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnActualizar.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnImgSiguiente.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnImgSiguiente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>906, 337</value>
+  </data>
+  <data name="btnImgSiguiente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 45</value>
+  </data>
+  <data name="btnImgSiguiente.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="btnImgSiguiente.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnImgSiguiente.Name" xml:space="preserve">
+    <value>btnImgSiguiente</value>
+  </data>
+  <data name="&gt;&gt;btnImgSiguiente.Type" xml:space="preserve">
+    <value>FontAwesome.Sharp.IconButton, FontAwesome.Sharp, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f</value>
+  </data>
+  <data name="&gt;&gt;btnImgSiguiente.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnImgSiguiente.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnImgAnterior.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnImgAnterior.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 363</value>
+  </data>
+  <data name="btnImgAnterior.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 45</value>
+  </data>
+  <data name="btnImgAnterior.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="btnImgAnterior.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnImgAnterior.Name" xml:space="preserve">
+    <value>btnImgAnterior</value>
+  </data>
+  <data name="&gt;&gt;btnImgAnterior.Type" xml:space="preserve">
+    <value>FontAwesome.Sharp.IconButton, FontAwesome.Sharp, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f</value>
+  </data>
+  <data name="&gt;&gt;btnImgAnterior.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnImgAnterior.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnLimpiarCampos.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnLimpiarCampos.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt, style=Bold</value>
+  </data>
+  <data name="btnLimpiarCampos.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnLimpiarCampos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>484, 132</value>
+  </data>
+  <data name="btnLimpiarCampos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 36</value>
+  </data>
+  <data name="btnLimpiarCampos.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="btnLimpiarCampos.Text" xml:space="preserve">
+    <value>Limpiar Campos</value>
+  </data>
+  <data name="&gt;&gt;btnLimpiarCampos.Name" xml:space="preserve">
+    <value>btnLimpiarCampos</value>
+  </data>
+  <data name="&gt;&gt;btnLimpiarCampos.Type" xml:space="preserve">
+    <value>FontAwesome.Sharp.IconButton, FontAwesome.Sharp, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f</value>
+  </data>
+  <data name="&gt;&gt;btnLimpiarCampos.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnLimpiarCampos.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnMostrarBuscarId.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnMostrarBuscarId.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt, style=Bold</value>
+  </data>
+  <data name="btnMostrarBuscarId.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnMostrarBuscarId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>117, 8</value>
+  </data>
+  <data name="btnMostrarBuscarId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 31</value>
+  </data>
+  <data name="btnMostrarBuscarId.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="btnMostrarBuscarId.Text" xml:space="preserve">
+    <value>Quiero Buscar</value>
+  </data>
+  <data name="&gt;&gt;btnMostrarBuscarId.Name" xml:space="preserve">
+    <value>btnMostrarBuscarId</value>
+  </data>
+  <data name="&gt;&gt;btnMostrarBuscarId.Type" xml:space="preserve">
+    <value>FontAwesome.Sharp.IconButton, FontAwesome.Sharp, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f</value>
+  </data>
+  <data name="&gt;&gt;btnMostrarBuscarId.Parent" xml:space="preserve">
+    <value>panelOcultarId</value>
+  </data>
+  <data name="&gt;&gt;btnMostrarBuscarId.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelOcultarId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 7</value>
+  </data>
+  <data name="panelOcultarId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 60</value>
+  </data>
+  <data name="panelOcultarId.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;panelOcultarId.Name" xml:space="preserve">
+    <value>panelOcultarId</value>
+  </data>
+  <data name="&gt;&gt;panelOcultarId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelOcultarId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelOcultarId.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>34</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 17</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1055, 675</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAgBAAAAAAAAAAAAAAAAAAAAAA
@@ -139,5 +807,26 @@
         AAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAAAgAAAAIAAAAEAAAABAAAAAQAAAAAAAAAAgAAAA/gA
         AAP/AAAD/8AAf//AB///wB////h////7//8=
 </value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1070, 712</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Álbum Empresarial de Eventos</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
+    <value>openFileDialog1</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

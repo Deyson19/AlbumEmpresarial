@@ -16,11 +16,16 @@ namespace AlbumEmpresarial
     {
         private readonly ApplicationDbContext dbContext = new ApplicationDbContext();
         Image img = Image.FromFile(@"..\Imagen\error.jpg");
+        private Image imagen = global::AlbumEmpresarial.Properties.Resources.error1;
+        ErrorProvider errorProvider = new ErrorProvider();
 
         int buscarId = 0;
         public Form1()
         {
             InitializeComponent();
+            btnCargar.Enabled = false;
+            btnCargar.ForeColor = Color.White;
+            txtId.Enabled = false;
         }
         public Form1(ApplicationDbContext dbContext)
         {
@@ -47,9 +52,9 @@ namespace AlbumEmpresarial
 
                 if ((id== string.Empty))
                 {
+                    validarId();
                     MessageBox.Show("Debes ingresar un ID a buscar"+id);
                     txtId.Focus();
-                    InitializeComponent();
                 }
                 else
                 {
@@ -65,7 +70,7 @@ namespace AlbumEmpresarial
                             Imagen = f.Imagen
                         }).FirstOrDefault(i => i.Id == Convert.ToInt32(id));
 
-                        if ((data == null) || (data.Id == null))
+                        if ((data == null) || (data.Id == 0))
                         {
                             MessageBox.Show("No se encontrado un registro en la consulta.");
                             limpiarCampos();
@@ -87,8 +92,8 @@ namespace AlbumEmpresarial
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Ha ocurrido un problema al recuperar la imagen.\nRevisa que el formato sea correcto.");
-                            pbImagen.Image = img;
+                            MessageBox.Show("Ha ocurrido un problema al recuperar la imagen.\nEl formato debe ser correcto.");
+                            pbImagen.Image = imagen;
 
                         }
 
@@ -232,34 +237,40 @@ namespace AlbumEmpresarial
         #endregion
         
         #region Validador de los campos para que no esten vacios
-        bool Validar()
+        private bool Validar()
         {
+            var colorDefecto = Color.FromArgb(140, 173, 187);
+           
             if (txtDescripcionImagen.Text == string.Empty)
             {
+                errorProvider.SetError(txtDescripcionImagen,"Debes describir la imagen.");
                 descripcion.ForeColor = Color.Red;
                 txtDescripcionImagen.Focus();
                 return false;
             }
-            descripcion.ForeColor = Color.Black;
+            descripcion.ForeColor = colorDefecto;
 
             if (txtDescripcionEvento.Text == string.Empty)
             {
+                errorProvider.SetError(txtDescripcionEvento,"Es necesario describir el evento.");
                 descripcionEvento.ForeColor = Color.Red;
                 txtDescripcionEvento.Focus();
                 return false;
             }
-            descripcionEvento.ForeColor = Color.Black;
+            descripcionEvento.ForeColor = colorDefecto;
 
             if (txtLugar.Text == string.Empty)
             {
+                errorProvider.SetError(txtLugar,"Debes indicar un lugar de la foto.");
                 lugarEvento.ForeColor = Color.Red;
                 txtLugar.Focus();
                 return false;
             }
-            lugarEvento.ForeColor = Color.Black;
+            lugarEvento.ForeColor = colorDefecto;
 
             if (pbImagen.Image == null)
             {
+                errorProvider.SetError(pbImagen,"Debes seleccionar una imagen.");
                 MessageBox.Show("Debe indicar una imagen.");
                 return false;
             }
@@ -286,7 +297,7 @@ namespace AlbumEmpresarial
 
                 if ((data == null) || (data.Id == null))
                 {
-                    MessageBox.Show("No se encontrado un registro en la consulta.\nIntenta con otro ID.");
+                    MessageBox.Show("No se encontrado un registro en la consulta.\nIntenta con otro ID en la búsqueda.");
                     limpiarCampos();
                     InitializeComponent();
                 }
@@ -307,8 +318,9 @@ namespace AlbumEmpresarial
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Ha ocurrido un problema al recuperar la imagen.\nRevisa que el formato sea correcto.");
-                        pbImagen.Image = img;
+                        MessageBox.Show("Ha ocurrido un problema al recuperar la imagen.\nO no es correcto su formato.");
+                        errorProvider.SetError(pbImagen, "No se pudo recuperar la image");
+                        pbImagen.Image = imagen;
                     }
 
                     btnImgSiguiente.Visible = true;
@@ -368,7 +380,7 @@ namespace AlbumEmpresarial
                     catch (Exception ex)
                     {
                         MessageBox.Show("Ha ocurrido un problema al recuperar la imagen.\nRevisa que el formato sea correcto.");
-                        pbImagen.Image = img;
+                        pbImagen.Image = imagen;
                     }
 
                     btnImgSiguiente.Visible = true;
@@ -385,8 +397,45 @@ namespace AlbumEmpresarial
                 MessageBox.Show("Ha ocurrido el error: " + ex);
             }
         }
+
         #endregion
 
+        private void btnLimpiarCampos_Click(object sender, EventArgs e)
+        {
+            limpiarCampos();
+            txtId.Text = "0";
+        }
+
+        private void txtId_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            validarId();
+        }
+
+        private bool validarId()
+        {
+            bool stado = true;
+            if (txtId.Text==""||txtId.Text==null)
+            {
+                errorProvider.SetError(txtId, "Por favor ingresa un ID válido.");
+                stado = false;
+            }
+            else
+            {
+                errorProvider.SetError(txtId, "");
+            }
+            return stado;
+        }
+
+        private void btnMostrarBuscarId_Click(object sender, EventArgs e)
+        {
+            panelOcultarId.Visible = false;
+            txtId.Enabled = true;
+            btnMostrarBuscarId.Visible = false;
+            btnCargar.Enabled = true;
+
+            btnGuardar.Enabled = false;
+            
+        }
 
     }
 }
