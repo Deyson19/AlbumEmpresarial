@@ -15,7 +15,7 @@ namespace AlbumEmpresarial
     public partial class Form1 : Form
     {
         private readonly ApplicationDbContext dbContext = new ApplicationDbContext();
-        Image img = Image.FromFile(@"..\Imagen\error.jpg");
+        //Image img = Image.FromFile(@"..\Imagen\error.jpg");
         private Image imagen = global::AlbumEmpresarial.Properties.Resources.error1;
         ErrorProvider errorProvider = new ErrorProvider();
 
@@ -41,7 +41,7 @@ namespace AlbumEmpresarial
             datePickerFecha.Visible = true;
             txtDescripcionImagen.Text = String.Empty;
             pbImagen.Image = null;
-             
+            txtId.Text = ""; 
         }
         #endregion
 
@@ -50,7 +50,7 @@ namespace AlbumEmpresarial
         {
             var id = txtId.Text.ToString();
 
-                if ((id== string.Empty))
+                if ((id== string.Empty||id=="0"))
                 {
                     validarId();
                     MessageBox.Show("Debes ingresar un ID a buscar"+id);
@@ -77,13 +77,18 @@ namespace AlbumEmpresarial
                         }
                         else
                         {
-                            txtId.Text = data.Id.ToString();
+                        if (data.Id > 2)
+                        {
+                            btnImgAnterior.Visible = true;
+                        }
+                        txtId.Text = data.Id.ToString();
                             txtDescripcionEvento.Text = data.Descripcion_Evento.ToString();
                             txtDescripcionImagen.Text = data.Descripcion.ToString();
                             txtLugar.Text = data.Lugar.ToString();
                             datePickerFecha.Visible = false;
                             lblFechaEvento.Visible = true;
                             lblFechaEvento.Text = data.Fecha_Evento.ToString();
+                        
                         try
                         {
                             MemoryStream ms = new MemoryStream((byte[])data.Imagen);
@@ -182,9 +187,26 @@ namespace AlbumEmpresarial
             }
             else
             {
-                DataAccess elimarRegistro = new DataAccess();
-                elimarRegistro.EliminarRegistro(Convert.ToInt32(id));
-                limpiarCampos();
+                const string message =
+                "¿Está seguro de que desea borrar el registro?";
+                const string caption = "Cerrar";
+                var result = MessageBox.Show(message, caption,
+                                             MessageBoxButtons.YesNo,
+                                             MessageBoxIcon.Question);
+
+                // If the no button was pressed ...
+                if (result == DialogResult.No)
+                {
+                    // cancel the closure of the form.
+                    MessageBox.Show("Nada para hacer aquí");
+                }
+                else
+                {
+                    DataAccess elimarRegistro = new DataAccess();
+                    elimarRegistro.EliminarRegistro(Convert.ToInt32(id));
+                    limpiarCampos();
+                }
+                
             }
         }
         #endregion
@@ -227,8 +249,9 @@ namespace AlbumEmpresarial
                         limpiarCampos();
                         if ((txtId.Text !=null)||txtId.Text!= String.Empty)
                         {
-                            MessageBox.Show("Se actualiza la entrada con valor de:" + txtId.Text.ToString());
                             txtId.Text = string.Empty;
+                            btnImgAnterior.Enabled = false;
+                            btnImgSiguiente.Enabled = false;
                         }
                     }
                 }
@@ -433,9 +456,24 @@ namespace AlbumEmpresarial
             btnMostrarBuscarId.Visible = false;
             btnCargar.Enabled = true;
 
-            btnGuardar.Enabled = false;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            const string message =
+                "¿Está seguro de que desea cerrar el formulario?";
+            const string caption = "Cerrar el Formulario";
+            var result = MessageBox.Show(message, caption,
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
+
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
             
         }
 
+        
     }
 }

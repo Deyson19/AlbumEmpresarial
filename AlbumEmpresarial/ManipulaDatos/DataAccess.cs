@@ -109,8 +109,6 @@ namespace AlbumEmpresarial.ManipulaDatos
 
                         _context.Fotos.Update(buscarRegistro);
                         _context.SaveChangesAsync();
-
-                        MessageBox.Show("Actualizamos el registro:" + buscarRegistro);
                     }
                 }
                 else

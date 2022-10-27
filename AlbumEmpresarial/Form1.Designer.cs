@@ -293,7 +293,7 @@
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.TopMost = true;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
             this.panelOcultarId.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -511,7 +511,7 @@
     <value>Flat</value>
   </data>
   <data name="btnGuardar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Variable Text, 12pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="btnGuardar.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -809,7 +809,7 @@
 </value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1070, 712</value>
+    <value>1070, 678</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
