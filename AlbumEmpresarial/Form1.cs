@@ -15,7 +15,7 @@ namespace AlbumEmpresarial
     public partial class Form1 : Form
     {
         private readonly ApplicationDbContext dbContext = new ApplicationDbContext();
-        Image img = Image.FromFile(@"..\Imagen\error.jpg");
+        //Image img = Image.FromFile(@"..\Imagen\error.jpg");
         private Image imagen = global::AlbumEmpresarial.Properties.Resources.error1;
         ErrorProvider errorProvider = new ErrorProvider();
 
@@ -92,7 +92,7 @@ namespace AlbumEmpresarial
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Ha ocurrido un problema al recuperar la imagen.\nEl formato debe ser correcto.");
+                            MessageBox.Show("Hubo un problema al recuperar la imagen.\nEl formato debe ser correcto.");
                             pbImagen.Image = imagen;
 
                         }
@@ -157,7 +157,7 @@ namespace AlbumEmpresarial
             }
             else
             {
-                MessageBox.Show("Hubo un error con los campos, todos deben estar completos.","Atención!");
+                //MessageBox.Show("Hubo un error con los campos, todos deben estar completos.","Atención!");
                 limpiarCampos();
             }
         }
@@ -271,7 +271,7 @@ namespace AlbumEmpresarial
             if (pbImagen.Image == null)
             {
                 errorProvider.SetError(pbImagen,"Debes seleccionar una imagen.");
-                MessageBox.Show("Debe indicar una imagen.");
+                //MessageBox.Show("Debe indicar una imagen.");
                 return false;
             }
             return true;
